@@ -1,0 +1,135 @@
+/* Games.css */
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.game-card {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.game-icon-wrapper {
+    font-size: 3rem;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+
+.game-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    flex-grow: 1;
+}
+
+.btn-play {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    width: 100%;
+}
+
+.btn-play:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.btn-play.primary {
+    background: linear-gradient(to right, #a855f7, #3b82f6);
+}
+
+.btn-play.primary:hover {
+    background: linear-gradient(to right, #9333ea, #2563eb);
+}
+
+.highlighted-game {
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    background: rgba(168, 85, 247, 0.05);
+}
+
+
+/* Color Breath Specific */
+.color-breath-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+    padding: 2rem 0;
+}
+
+.breath-playground {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 100%;
+}
+
+.breath-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #38bdf8, #a78bfa);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 50px rgba(167, 139, 250, 0.5);
+    transition: all 4s ease-in-out;
+}
+
+.breath-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.breath-circle.animating.inhale {
+    transform: scale(2.2);
+    background: linear-gradient(135deg, #34d399, #38bdf8);
+    box-shadow: 0 0 80px rgba(52, 211, 153, 0.6);
+}
+
+.breath-circle.animating.exhale {
+    transform: scale(1);
+    background: linear-gradient(135deg, #38bdf8, #a78bfa);
+    box-shadow: 0 0 40px rgba(167, 139, 250, 0.4);
+}
+
+.btn-start-breath {
+    background: white;
+    color: #0f111a;
+    border: none;
+    padding: 1rem 3rem;
+    border-radius: 3rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-start-breath:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+}
